@@ -1,0 +1,69 @@
+//////////////////////////////////////
+/////////////Rest Css/////////////////
+//////////////////////////////////////
+html {
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+
+//////////////////////////////////////
+//////////////Colors//////////////////
+//////////////////////////////////////
+:root{
+    --theme-color:#EE3030;
+    --secondary-theme-color:#0c2b4c;
+}
+
+//////////////////////////////////////
+/////////////Font Sizes///////////////
+//////////////////////////////////////
+
+:root{
+    --font-size-heading:2rem;
+    --font-size-paragraph:1.4rem;
+    --font-size-sub-heading:1.6rem;
+    --font-size-300:1.6rem;
+}
+
+@media screen and (min-width:1034px) {
+    :root{
+        --font-size-heading:2.5rem;
+        --font-size-paragraph:1.7rem;
+        --font-size-sub-heading:1.9rem;
+        --font-size-300:1.7rem;
+    }
+}
+
+h1{
+    font-size: var(--font-size-heading);
+    font-weight: 500;
+}
+h2{
+    font-size: var(--font-size-sub-heading);
+    font-weight: 400;
+}
+h3{
+    font-size: var(--font-size-300);
+}
+p{
+    font-size: var(--font-size-paragraph);
+    color: rgb(64, 64, 64);
+}
+
+
+
+//////////////////////////////////////
+///////////Other Styles///////////////
+//////////////////////////////////////
+
+:root{
+    --border-radius-main: 2rem;
+    --border-radius-inner: 1rem;
+}
+

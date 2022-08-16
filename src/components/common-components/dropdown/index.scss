@@ -1,0 +1,79 @@
+.dropdown-control {
+    position: relative;
+    display: block;
+    cursor: pointer !important;
+    .input-field{
+        cursor: pointer !important;
+        user-select: none;
+        text-transform: capitalize;
+    }
+    label{
+        cursor: pointer !important;
+        user-select: none;
+    }
+}
+
+.dropdown-control__dropdown {
+    display: none;
+    min-height: 100%;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background-color: #EFEFEF;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 4px !important;
+    // padding: 2rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px !important;
+}
+
+.dropdown-control__dropdown-option {
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dropdown-control__icon{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    svg{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.dropdown-control__icon.active{
+    transform: rotate(180deg);
+}
+
+
+.dropdown-control.selected {
+    .dropdown-control__dropdown {
+        display: flex !important;
+    }
+}
+
+.dropdown-control__dropdown-option-icon{
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    opacity: 50%;
+    transition: .08s all ease;
+    svg{
+        width: 100% !important;
+        height: 100%;
+    }
+}
+
+.dropdown-control__dropdown-option-icon:hover{
+    opacity: 100%;
+}

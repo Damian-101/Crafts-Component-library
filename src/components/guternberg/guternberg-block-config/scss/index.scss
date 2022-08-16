@@ -1,0 +1,135 @@
+.block-config {
+    background-color: rgb(235, 235, 235);
+    padding: 2rem;
+    min-height: 500px;
+    font-family: "poppins";
+    position: relative;
+    border-radius: var(--border-radius-main);
+    min-height: 568px;
+    .block-config__details {
+        .block-config__details-heading {
+            margin: 0;
+            max-width: 30ch;
+        }
+
+        .block-config__details-description {
+            max-width: 48ch;
+            margin-bottom: 2.8rem;
+        }
+    }
+}
+
+.block-config__details-brand-logo{
+    width: 120px;
+    display: table;
+    margin-bottom: 2rem;
+}
+
+.block-config__details-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.block-config__details-icon{
+    min-width: 40px;
+    max-width: 40px;
+    // height: 40px;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+// Popup
+.block-config__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: var(--border-radius-inner);
+    opacity: 0;
+    z-index: -1;
+    transition: .2s all ease;
+    .block-config__popup-close-btn{
+        width: 18px;
+        margin-left: auto;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        svg{
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .block-config__popup-content {
+        // display: grid;
+        padding: 2.5rem 1.5rem;
+        background-color: #EFEFEF;
+        width: 100%;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: scroll;
+        height: 84%;
+        border-radius: var(--border-radius-inner);
+    }
+}
+
+.block-config__popup.active{
+    z-index: 999;
+    opacity: 100%;
+}
+
+
+.block-config__popup-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: var(--border-radius-main);
+    // opacity: 0;
+    // transition: .2s all ease;
+}
+
+// .block-config__popup-overlay.active{
+//     opacity: 100%;
+//     z-index:auto;
+//     transition: .2s all ease;
+// }
+
+.block-config__content{
+    position: relative;
+}
+
+@media screen and (min-width:834px) {
+    .block-config {
+        padding: 5rem;
+        min-height: 600px;
+        .block-config__details-top{
+            margin-bottom: 1.8rem;
+        }
+        .block-config__details {
+            .block-config__details-description {
+                // max-width: 48ch;
+                margin-bottom: 3.8rem;
+            }
+        }
+        .block-config__popup {
+            .block-config__popup-content {
+                padding: 3.5rem 2.5rem;
+                max-width: 685px;
+
+            }
+        }
+    }
+}

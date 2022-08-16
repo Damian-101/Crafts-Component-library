@@ -1,0 +1,33 @@
+import { Canvas, Meta, ArgsTable, Story, Source } from "@storybook/addon-docs";
+// import  from "../../components/common-components/dropdown/child-components/dropdown-item";
+import {Dropdown,DropdownItem} from "../../../components/common-components/dropdown";
+
+# Dropdown Control
+
+<Canvas>
+  <Story id="components-dropdown-control--default"/>
+</Canvas>
+
+# Dropdown
+`<Dropdown/>` Component Can Be Used To Show Multiple Values Using A Dropdown.
+
+<Source
+  dark
+  format={false}
+  code={
+  `<Dropdown label="Label Name">
+    {/* Dropdown Content Goes Here */}
+</Dropdown>`
+  }
+/>
+<ArgsTable of={Dropdown}/>
+
+
+# Dropdown Item
+`<DropdownItem/>` Component Can Be Used Display Values With Added Spacing And Functionality.
+
+<Source
+  dark
+  format={false}
+/>
+<ArgsTable of={DropdownItem}/>
