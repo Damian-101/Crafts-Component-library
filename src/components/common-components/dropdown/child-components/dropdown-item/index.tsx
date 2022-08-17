@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC,ReactNode } from "react"
 import PropTypes from 'prop-types';
 
 
@@ -10,11 +10,11 @@ interface DropdownItemProps {
     /**
      * Icon Of The Dropdown Item
      */
-    icon?:any;
+    icon?:ReactNode;
     /**
      * Dropdown Content
      */
-    children?:any;
+    children?:ReactNode;
     /**
      * Run The Function When Dropdown Is Clicked
      */
@@ -22,7 +22,7 @@ interface DropdownItemProps {
 
 }
 
-
+/** Display An Item Of The Popup */
 export const DropdownItem:FC<DropdownItemProps> = (props) => {
     const onClick = (e) => {
         const value:string = e.currentTarget.dataset.option
@@ -57,9 +57,9 @@ DropdownItem.propTypes = {
     /**
      * Icon Of The Dropdown Item
      */
-    icon:PropTypes.any,
+    icon:PropTypes.element,
     /**
      * Dropdown Content
      */
-    children:PropTypes.any
+    children:PropTypes.element
   };

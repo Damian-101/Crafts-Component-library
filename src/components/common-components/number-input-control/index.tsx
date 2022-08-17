@@ -32,6 +32,7 @@ interface NumberInputControlProps {
      className?:string
 }
 
+/** Number Input Field */
 export const NumberInputControl:FC<NumberInputControlProps> = ({ label, placeholder, onChange, value, errMsg, className }) => {
     const [isSelected, setIsSelected] = useState(false)
     const [isExpanded, setIsExpanded] = useState(false)

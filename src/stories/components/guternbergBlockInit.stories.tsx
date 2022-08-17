@@ -24,7 +24,7 @@ Default.args = {
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
     icon: <Layout />,
-  children:<BlockConfigContent/>,
+    children:<BlockConfigContent/>,
 };
 
 export const Popup = Template.bind({});
@@ -34,4 +34,15 @@ Popup.args = {
     sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
     icon: <Layout />,
   children:<BlockConfigContent2/>,
+};
+
+
+export const isLoading = Template.bind({});
+isLoading.args = {
+    name: 'Full Width Layout Block',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
+    icon: <Layout />,
+    children:<BlockConfigContent2/>,
+    isLoading:true
 };

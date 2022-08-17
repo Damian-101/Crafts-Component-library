@@ -3,6 +3,11 @@ import "./scss/index.scss";
 import brandLogo from '../../../images/brand-logo-light.png';
 import "../../../scss/theme.scss"
 import PropTypes from 'prop-types';
+import "../../../scss/loading-screen.scss"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { Oval } from  'react-loader-spinner'
+import { themeColor } from '../../../../variables';
 
 export interface BlockConfigProps {
   /**
@@ -16,19 +21,49 @@ export interface BlockConfigProps {
   /**
    * Block Icon
    */
-  icon?:any;
+  icon?:ReactNode;
   /**
    * Block Configuration Content
    */
-  children?:HTMLElement | ReactNode;
+  children?:ReactNode;
+  /**
+   * Is Component Content Loading
+   */
+  isLoading?:boolean
 }
+
+
 
 /**
  * A Component To Display Guternberg Block Configuration
  */
-export const GuternbergBlockConfig:FC<BlockConfigProps> = ({ name, description, icon, children }) => {
+export const GuternbergBlockConfig:FC<BlockConfigProps> = ({ name, description, icon, children,isLoading }) => {
+
+  const loading = () => {
+    const skeletonColor = 'rgb(209, 209, 209)'
+    return(
+        <div className='loading block-config'>
+          <Oval
+            height = "60"
+            width = "60"
+            color = {skeletonColor}
+            ariaLabel = 'three-dots-loading'    
+            secondaryColor={themeColor}
+            strokeWidth='4'
+          />
+        </div>
+    )
+  }
+
+
+  //isLoading Default Is False
+    if(!isLoading){
+      isLoading = false
+    }
   return (
     <>
+    {
+      isLoading === false ?
       <div className='block-config'>
         {brandLogo &&
           <img src={brandLogo} alt='brand logo' className='block-config__details-brand-logo' />
@@ -56,6 +91,11 @@ export const GuternbergBlockConfig:FC<BlockConfigProps> = ({ name, description, 
         </div>
         {children}
       </div>
+      :
+      //component loading screen
+      loading()
+    }
+      
     </>
   );
 }
@@ -83,4 +123,8 @@ export const GuternbergBlockConfig:FC<BlockConfigProps> = ({ name, description, 
    * Guternberg Block Config Content
    */
   children:PropTypes.element,
+  /**
+   * Is Component Content Loading
+   */
+  isLoading:PropTypes.bool
 };

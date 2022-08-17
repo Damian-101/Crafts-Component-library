@@ -23,6 +23,8 @@ interface PopupProps {
   children?:any;
 }
 
+
+/** Display A Popup */
 export const Popup: FC<PopupProps> = ({
   isPopupRendered,
   children,
@@ -84,7 +86,7 @@ Popup.propTypes = {
    * Popup Content
    */
   // @ts-ignore
-  children: PropTypes.any,
+  children: PropTypes.element,
 };
 
 //Export Sub Components

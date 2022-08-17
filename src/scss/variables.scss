@@ -1,0 +1,7 @@
+@import "./theme.scss";
+
+$theme-color:var(--theme-color);
+
+:export{
+    themeColor:$theme-color;
+}

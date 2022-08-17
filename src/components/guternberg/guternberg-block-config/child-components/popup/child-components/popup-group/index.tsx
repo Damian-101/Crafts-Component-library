@@ -1,6 +1,6 @@
 import "./index.scss";
 import PropTypes from "prop-types";
-import React, { FC } from "react";
+import React, { FC,ReactNode } from "react";
 
 interface PopupGroupProps {
   /**
@@ -10,9 +10,10 @@ interface PopupGroupProps {
   /**
    * Group Content
    */
-  children?: any;
+  children?: ReactNode;
 }
 
+/** To Group Popup Content */
 export const PopupGroup: FC<PopupGroupProps> = ({ label, children }) => {
   return (
     <div className="block-config__popup-group">
@@ -35,5 +36,5 @@ PopupGroup.propTypes = {
    * Group Content
    */
   // @ts-ignore
-  children: PropTypes.any,
+  children: PropTypes.element,
 };

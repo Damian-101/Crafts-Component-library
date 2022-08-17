@@ -1,9 +1,13 @@
 import "./index.scss"
 import PropTypes from 'prop-types';
-import React,{ FC } from "react";
+import React,{ FC,ReactNode } from "react";
 
+
+/**
+ * To Display A Item Of The Popup With Default Styling
+ */
 interface PopupItemProps {
-    children?:any
+    children?:ReactNode
 }
 
 export const PopupItem:FC<PopupItemProps> = ({children}) => {
@@ -22,6 +26,6 @@ export const PopupItem:FC<PopupItemProps> = ({children}) => {
     /**
      * Popup Item Content
      */
-    children: PropTypes.any,
+    children: PropTypes.element,
   };
   

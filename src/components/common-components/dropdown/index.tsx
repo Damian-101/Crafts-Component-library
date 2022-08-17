@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, ReactNode, useState } from "react";
 import "../scss/input-fields.scss";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,29 +9,31 @@ interface DropdownProps {
   /**
    * Add Dropdown Label
    */
-  label: string;
+  label?: string;
   /**
    * Value To Display In The Input Field
    */
-  value: string;
+  value?: string;
   /**
    * Whether The Dropdown Is Selected / Open
    */
-  isOpen: boolean;
+  isOpen?: boolean;
   /**
    * Add Dropdown Content
    */
-  children: any;
+  children?: ReactNode;
   /**
    * Run The Function When Dropdown Is Clicked
    */
-  onClick: () => void;
+  onClick?: () => void;
   /**
    * Run The Function When Dropdown Is Not Selected
    */
-  onBlur: () => void;
+  onBlur?: () => void;
 }
 
+
+/** Dropdown Component */
 export const Dropdown: FC<DropdownProps> = ({
   label,
   value,

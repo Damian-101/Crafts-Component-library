@@ -35,6 +35,8 @@ interface TextInputControlProps {
      className?: string
 }
 
+
+/** Text Input Field */
 const TextInputControl:FC<TextInputControlProps> = ({label,placeholder,onChange,value,max,errMsg,className}) => {
     const [isSelected,setIsSelected] = useState(false)
     const [isExpanded,setIsExpanded] = useState(false)

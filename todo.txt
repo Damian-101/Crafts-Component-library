@@ -1,12 +1,9 @@
 /////*/////
 Convert Components To TypeScript / Add Document The Type
-    Find Best Types To Icon And Children Props
-    Learn And Add Testing To The Compoenents
-
+    Re organize the Components
 /////**/////
 Publish The Library
 
-
 ////Done/////
-Find And Fix The Icon Issue In Dropdown (index.tsx 65)
-Convert text-input-control to TypeScript
+    Create A Loading Screen For Guternberg Block Config
+    Find Best Types To Icon And Children Props
