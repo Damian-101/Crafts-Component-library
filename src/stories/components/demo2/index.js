@@ -1,7 +1,7 @@
 import RenderPopupContent from "./renderPopupContent"
 import React,{useState} from "react"
 import "../../../scss/theme.scss"
-import Button from "../../../components/common-components/button"
+import Button from "../../../components/button"
 const BlockConfigContent = () => {
     const [isPopupRendered,setIsPopupRendered] = useState(false)
     const showSettings = () => {

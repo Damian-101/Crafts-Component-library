@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {NumberInputControl} from '../../../components/common-components/number-input-control';
-import {Dropdown,DropdownItem} from '../../../components/common-components/dropdown';
+import {NumberInputControl} from '../../../components/number-input-control';
+import {Dropdown,DropdownItem} from '../../../components/dropdown';
 import {Popup,PopupGroup,PopupItem} from '../../../components/guternberg/guternberg-block-config/child-components/popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons'

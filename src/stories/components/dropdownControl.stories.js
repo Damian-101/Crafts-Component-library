@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Dropdown,DropdownItem} from '../../components/common-components/dropdown';
+import {Dropdown,DropdownItem} from '../../components/dropdown';
 // import DropdownItem from '../components/common-components/dropdown/child-components/dropdown-item';
 import Doc from './docs/DropdownMdxDoc.mdx'
 export default {

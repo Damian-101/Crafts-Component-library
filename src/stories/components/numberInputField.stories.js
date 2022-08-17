@@ -1,5 +1,5 @@
 import React from 'react';
-import {NumberInputControl} from '../../components/common-components/number-input-control';
+import {NumberInputControl} from '../../components/number-input-control';
 import Doc from './docs/NumberInputControl.mdx'
 export default {
   component: NumberInputControl,

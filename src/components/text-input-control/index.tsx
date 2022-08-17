@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useRef, FC} from "react"
 import "./index.scss"
-import "../../../scss/theme.scss"
+import "../../scss/theme.scss"
 import "../scss/input-fields.scss"
 import PropTypes from 'prop-types';
 
