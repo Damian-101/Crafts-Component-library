@@ -37,25 +37,26 @@ interface TextInputControlProps {
 
 
 /** Text Input Field */
-const TextInputControl:FC<TextInputControlProps> = ({label,placeholder,onChange,value,max,errMsg,className}) => {
-    const [isSelected,setIsSelected] = useState(false)
-    const [isExpanded,setIsExpanded] = useState(false)
+export const TextInputControl:FC<TextInputControlProps> = ({label,placeholder,onChange,value,max,errMsg,className}) => {
+    const [isSelected,setIsSelected] = useState<boolean>()
+    const [isExpanded,setIsExpanded] = useState<boolean>(false)
     const textInput: any = useRef();
 
     useEffect(() => {
         if(value !== undefined){
             setIsExpanded(true)
-        } 
+        }
+        setIsSelected(false)
     },[])
 
-    const onInputFocus = (e) => {
+    const onInputFocus = (e:any) => {
         setIsSelected(true)
         setIsExpanded(true)
         //Focus On The Input Field
         textInput.current.focus()
     }
 
-    const onInputBlur = (e) => {
+    const onInputBlur = (e:any) => {
         setIsSelected(false)
         if(e.target.value === ""){
             setIsExpanded(false)
@@ -85,8 +86,6 @@ const TextInputControl:FC<TextInputControlProps> = ({label,placeholder,onChange,
         </>
     )
 }
-
-export default TextInputControl
 
 /**
  * Component Args

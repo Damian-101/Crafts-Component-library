@@ -44,14 +44,14 @@ export const NumberInputControl:FC<NumberInputControlProps> = ({ label, placehol
         }
     }, [])
 
-    const onInputFocus = (e) => {
+    const onInputFocus = (e:any) => {
         setIsSelected(true)
         setIsExpanded(true)
         //Focus On The Input Field
         textInput.current.focus()
     }
 
-    const onInputBlur = (e) => {
+    const onInputBlur = (e:any) => {
         setIsSelected(false)
         if (e.target.value === "") {
             setIsExpanded(false)
@@ -70,20 +70,20 @@ export const NumberInputControl:FC<NumberInputControlProps> = ({ label, placehol
         }
     }
 
-    const diableAlphebets = (e) => {
+    const diableAlphebets = (e:any) => {
         if ((e.keyCode >= 64 && e.keyCode <= 91) || (e.keyCode >= 96 && e.keyCode <= 123)) {
             e.preventDefault();
         }
     }
 
-    const disableSpecialCharacters = (e) => {
+    const disableSpecialCharacters = (e:any) => {
         const regex = /[`!@#$%^&*()_+\-=\[\]\s{};':"\\|,.<>\/?~]/g
         if (regex.test(e.key)) {
             e.preventDefault();
         }
     }
 
-    const onKeyDown = (e) => {
+    const onKeyDown = (e:any) => {
         diableAlphebets(e)
         disableSpecialCharacters(e)
     }

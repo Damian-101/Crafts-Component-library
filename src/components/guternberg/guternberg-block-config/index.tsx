@@ -1,14 +1,11 @@
 import React, { FC,useEffect, useState,ReactNode  } from 'react';
 import "./scss/index.scss";
+// @ts-ignore
 import brandLogo from '../../../images/brand-logo-light.png';
-import "../../../scss/theme.scss"
 import PropTypes from 'prop-types';
 import "../../../scss/loading-screen.scss"
-import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Oval } from  'react-loader-spinner'
-import { themeColor } from '../../../../variables';
-
 export interface BlockConfigProps {
   /**
    * Name Of The Block
@@ -48,7 +45,7 @@ export const GuternbergBlockConfig:FC<BlockConfigProps> = ({ name, description, 
             width = "60"
             color = {skeletonColor}
             ariaLabel = 'three-dots-loading'    
-            secondaryColor={themeColor}
+            secondaryColor={skeletonColor}
             strokeWidth='4'
           />
         </div>

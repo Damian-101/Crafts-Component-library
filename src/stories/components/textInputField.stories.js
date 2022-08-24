@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import TextInputControl from '../../components/text-input-control/index';
+import {TextInputControl} from '../../components/text-input-control/index';
 import Doc from './docs/TextInputControl.mdx'
 
 export default {

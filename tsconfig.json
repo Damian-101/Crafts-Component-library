@@ -1,0 +1,28 @@
+// exclude scss and js file 
+{
+  "include": [
+    "src/components/**/*",
+    "src/index.js"
+  ],
+  "exclude": [
+    "src/variables.js",
+    "src/variables.d.ts",
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    // "emitDeclarationOnly": true,
+    "outDir": "dist/build-types/",
+    "noImplicitAny": true,
+    "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
+    "module": "ES2015",
+    "target": "ES2015",
+    "checkJs": false,
+    "allowJs": true,
+    "types": ["node"],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

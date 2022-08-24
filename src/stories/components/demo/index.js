@@ -3,6 +3,7 @@ import layout1 from "./images/leftTextLayout.png"
 import layout2 from "./images/rightTextLayout.png"
 import React,{useState} from "react"
 import "../demo/scss/select-layout.scss"
+
 const BlockConfigContent = () => {
     const [isPopupRendered,setIsPopupRendered] = useState(false)
     //layout config

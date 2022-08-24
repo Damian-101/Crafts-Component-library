@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {NumberInputControl} from '../../../components/number-input-control';
 import {Dropdown,DropdownItem} from '../../../components/dropdown';
-import {Popup,PopupGroup,PopupItem} from '../../../components/guternberg/guternberg-block-config/child-components/popup';
+import {Popup,PopupGroup,PopupItem} from '../../../components/popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 const RenderPopupContent = ({ isPopupRendered, onClose }) => {

@@ -18,13 +18,13 @@ interface DropdownItemProps {
     /**
      * Run The Function When Dropdown Is Clicked
      */
-    onClick:(arg0: string) => void;
+    onClick?:(arg0: string) => void;
 
 }
 
 /** Display An Item Of The Popup */
 export const DropdownItem:FC<DropdownItemProps> = (props) => {
-    const onClick = (e) => {
+    const onClick = (e:any) => {
         const value:string = e.currentTarget.dataset.option
         if(props.onClick){
             if(props.value){

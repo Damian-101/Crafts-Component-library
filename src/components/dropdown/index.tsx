@@ -1,10 +1,11 @@
 import React, { FC, ReactNode, useState } from "react";
-import "../scss/input-fields.scss";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import PropTypes from "prop-types";
-import { DropdownItem as DropdownItemSubComponent } from "./child-components/dropdown-item";
+import PropTypes from 'prop-types';
+export {DropdownItem} from "./child-components/dropdown-item";
+
+
 interface DropdownProps {
   /**
    * Add Dropdown Label
@@ -21,7 +22,7 @@ interface DropdownProps {
   /**
    * Add Dropdown Content
    */
-  children?: ReactNode;
+  children?: ReactNode | ReactNode[];
   /**
    * Run The Function When Dropdown Is Clicked
    */
@@ -42,7 +43,7 @@ export const Dropdown: FC<DropdownProps> = ({
   onClick,
   isOpen,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const isExpanded = true
   return (
     <div
       className={`dropdown-control ${isOpen ? "selected" : ""} ${
@@ -108,5 +109,3 @@ Dropdown.propTypes = {
   onBlur: PropTypes.func,
 };
 
-//Export Sub Components
-export let DropdownItem = DropdownItemSubComponent;

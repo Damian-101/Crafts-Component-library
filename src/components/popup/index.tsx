@@ -1,8 +1,6 @@
 import React,{ FC } from 'react';
 import "./index.scss";
 import PropTypes from "prop-types";
-import { PopupGroup as PopUpGroupSubComponent } from "./child-components/popup-group";
-import { PopupItem as PopupItemSubComponent } from "./child-components/popup-item";
 
 interface PopupProps {
   /**
@@ -89,7 +87,7 @@ Popup.propTypes = {
   children: PropTypes.element,
 };
 
-//Export Sub Components
 
-export let PopupGroup = PopUpGroupSubComponent;
-export let PopupItem = PopupItemSubComponent;
+// export sub components 
+export { PopupGroup } from "./child-components/popup-group";
+export { PopupItem} from "./child-components/popup-item";
