@@ -1,0 +1,97 @@
+.cs-select-layout__heading {
+  margin-bottom: 1.5rem !important;
+}
+
+.cs-select-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cs-select-layout .layout:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.cs-select-layout__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cs-select-layout .layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.cs-select-layout__layout-name {
+  margin-top: 1rem;
+}
+
+.cs-select-layout .layout img {
+  border: 2px solid var(--theme-color);
+  -webkit-transition: .05s border ease-in-out;
+  transition: .05s border ease-in-out;
+  border: 2px solid transparent;
+}
+
+.cs-select-layout .layout img:hover {
+  border: 2px solid #207C39;
+}
+
+.cs-select-layout__layout-name {
+  font-weight: 300;
+}
+
+.cs-select-layout__help-link {
+  font-weight: 300;
+}
+
+.cs-select-layout__sub-heading {
+  margin-bottom: 2rem !important;
+}
+
+@media screen and (min-width: 834px) {
+  .cs-select-layout .layout:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .cs-select-layout__select {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .cs-select-layout .layout:not(:first-child) {
+    margin-left: 3rem;
+  }
+}
+/*# sourceMappingURL=select-layout.css.map */

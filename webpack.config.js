@@ -67,5 +67,8 @@ module.exports = {
         type: 'umd',
       },
     },
-    
+    externals: {
+      "react": "react",
+      "react-dom": "reactDom"
+    }
   };

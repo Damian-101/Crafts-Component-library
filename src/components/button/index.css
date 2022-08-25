@@ -1,0 +1,32 @@
+.btn {
+  display: table;
+  padding: 1.3rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-transition: .2s opacity ease;
+  transition: .2s opacity ease;
+  font-weight: 400;
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: var(--secondary-theme-color);
+}
+
+.btn--secondary {
+  border: 1px solid #323232;
+}
+
+.btn:hover {
+  opacity: 80%;
+}
+
+@media screen and (min-width: 1112px) {
+  .btn {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */

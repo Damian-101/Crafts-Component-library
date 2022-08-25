@@ -11,11 +11,11 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    // "emitDeclarationOnly": true,
+    // "emitDeclarationOnly": true, 
     "outDir": "dist/build-types/",
     "noImplicitAny": true,
     "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
-    "module": "ES2015",
+    "module": "commonjs",
     "target": "ES2015",
     "checkJs": false,
     "allowJs": true,
