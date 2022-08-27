@@ -1,10 +1,7 @@
 /////*/////
 Publish The Library
     Compile Every Component To Js And TypeScript
-        // fix errors in the components
-            //React varsions not matching 
     Fully Complete The Package.json And Publish The Library (Needed Dependencies / Correct Files / Description)
-    
 /////**/////
 
 
@@ -12,3 +9,5 @@ Publish The Library
     Compile Every Component To Js And TypeScript
         //Convert Typecript scss import to css/main.css
         //check crafts-component-library is working
+        // fix errors in the components
+            //React varsions not matching 
