@@ -1,0 +1,12 @@
+.block-config__navbar-group{
+    display: flex;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.block-config__navbar-group:last-child{
+    margin-right: 0;
+    margin-bottom: 0;
+}

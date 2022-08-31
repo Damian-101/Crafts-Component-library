@@ -1,13 +1,15 @@
-/////*/////
-Publish The Library
-    Compile Every Component To Js And TypeScript
-    Fully Complete The Package.json And Publish The Library (Needed Dependencies / Correct Files / Description)
-/////**/////
+Extra GuternbergConfig Features
+    //navbar
+    Create Components For The Recommended Posts Component
+        //Searchbar
+            //Add Props To The Input Field
+        //Sort By
 
+        // * //
+        //Select Card (Use Already Coded One And Adust it)
+            //Add A Loading Screen To The Card
 
-////Done/////
-    Compile Every Component To Js And TypeScript
-        //Convert Typecript scss import to css/main.css
-        //check crafts-component-library is working
-        // fix errors in the components
-            //React varsions not matching 
+            !!!!!!Bugs!!!!!!!!
+            //NavGroup
+                //Need To Add A Prop To Check If The Items Stack ?
+    Change The Items For Current Style guide

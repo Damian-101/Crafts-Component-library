@@ -1,0 +1,66 @@
+
+
+
+.nav-button{
+    border: 2.9px solid var(--borderColor);
+    border-radius: .5rem;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: .1s all ease;
+    justify-content: center;
+}
+
+.nav-button__icon{
+    width: 17px;
+    height: 17px;
+    color: var(--secondary-color-light);
+    svg{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+
+.nav-button__name{
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+    display: none;
+}
+
+.nav-button:hover{
+    border: 2.9px solid var(--secondary-color);
+}
+
+.nav-button.active{
+    border-color: transparent;
+    background-color: var(--secondary-color);
+    .nav-button__name{
+        color: #fff;
+    }
+    .nav-button__icon{
+        color: #fff;
+    }    
+}
+
+.nav-button__tooltip{
+    background-color: var(--secondary-color) !important;
+}
+
+@media screen and (min-width:1112px) {
+    .nav-button{
+        padding: 1.7rem 2rem;
+    }
+    .nav-button__icon{
+        width: 20px;
+        height: 20px;
+    }
+    .nav-button__name{
+        font-size: 1.7rem;
+        display: block;
+    }
+}

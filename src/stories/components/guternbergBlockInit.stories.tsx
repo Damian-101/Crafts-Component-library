@@ -21,8 +21,7 @@ const Template = args => <GuternbergBlockConfig {...args} />;
 export const Default = Template.bind({});
 Default.args = {
     name: 'Full Width Layout Block',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
+    description: `Select A Layout`,
     icon: <Layout />,
     children:<BlockConfigContent/>,
 };
@@ -30,8 +29,7 @@ Default.args = {
 export const Popup = Template.bind({});
 Popup.args = {
     name: 'Full Width Layout Block',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
+    description: 'Click Show Popup',
     icon: <Layout />,
   children:<BlockConfigContent2/>,
 };
@@ -40,8 +38,7 @@ Popup.args = {
 export const isLoading = Template.bind({});
 isLoading.args = {
     name: 'Full Width Layout Block',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et consectetur adipiscing.`,
+    description: `Select A Item`,
     icon: <Layout />,
     children:<BlockConfigContent2/>,
     isLoading:true

@@ -15,7 +15,6 @@ const BlockConfigContent = () => {
     return (
         <>
         <RenderPopupContent isPopupRendered={isPopupRendered} onClose={hideSettings}/>
-            <h2 className="cs-select-layout__sub-heading">Select To Show Popup</h2>
             <Button buttonName="Show Popup" className="show--popup" type={'submit'} name="show-popup" onClick={showSettings}/>
         </>
     )

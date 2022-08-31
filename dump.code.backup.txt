@@ -1,0 +1,43 @@
+///Sidebar
+<div className="sidebar--toggle__wraper">
+          <div className="sidebar--toggle">
+            {/* @ts-ignore */}
+            <FontAwesomeIcon icon={faGear}/>
+          </div>
+          </div>
+          <div className="sidebar">
+            <h2 className="sidebar__heading">More Settings</h2>
+            <div className="sidebar__group">
+              <label className="sidebar__label">
+                Advance Post Select Options
+              </label>
+              <div className="barline"></div>
+              <Dropdown label="Select Post By" value="Monthly Posts"></Dropdown>
+            </div>
+            <div className="sidebar__group">
+              <label className="sidebar__label">Post Count Setting</label>
+              <div className="barline"></div>
+              <NumberInputControl
+                label="Add Maximum Post Count"
+                placeholder="Post Count"
+              />
+            </div>
+            <div className="sidebar__group">
+              <label className="sidebar__label">Post Count Setting</label>
+              <div className="barline"></div>
+              <NumberInputControl
+                label="Add Maximum Post Count"
+                placeholder="Post Count"
+              />
+            </div>
+          </div>
+
+
+                <div className="cs-msg-ui cs-select-layout">
+        {/* Select Options  */}
+        <div class="cs-select-layout__select">{renderLayouts()}</div>
+        {/* Help Link  */}
+        <h3 className="cs-select-layout__help-link">
+          <a href="#">Don’t Know What Layout To Use?</a>
+        </h3>
+      </div>
