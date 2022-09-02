@@ -7,7 +7,11 @@ export {
 } from './components/dropdown'
 
 export {
-    GuternbergBlockConfig
+    GuternbergBlockConfig,
+    NavBar,
+    NavButton,
+    NavGroup,
+    NavItem
 } from './components/guternberg/guternberg-block-config'
 
 export {
@@ -23,3 +27,14 @@ export {
     PopupGroup,
     PopupItem
 } from "./components/popup/index"
+
+
+export {
+    DropdownSm,
+} from "./components/dropdownSm"
+
+
+
+export {
+    SearchBar,
+} from "./components/searchBar"

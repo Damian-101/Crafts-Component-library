@@ -21,6 +21,12 @@
     }
 }
 
+.block-config.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .block-config__details-brand-logo{
     width: 120px;
     display: table;
@@ -36,7 +42,6 @@
 .block-config__details-icon{
     min-width: 40px;
     max-width: 40px;
-    // height: 40px;
     display: inline-block;
     margin-right: 1rem;
 }
@@ -71,7 +76,6 @@
         }
     }
     .block-config__popup-content {
-        // display: grid;
         padding: 2.5rem 1.5rem;
         background-color: #EFEFEF;
         width: 100%;
@@ -99,15 +103,8 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: var(--border-radius-main);
-    // opacity: 0;
-    // transition: .2s all ease;
 }
 
-// .block-config__popup-overlay.active{
-//     opacity: 100%;
-//     z-index:auto;
-//     transition: .2s all ease;
-// }
 
 .block-config__content{
     position: relative;

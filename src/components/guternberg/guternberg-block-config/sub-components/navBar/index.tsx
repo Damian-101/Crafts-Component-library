@@ -11,7 +11,7 @@ interface NavBarProps {
 export const NavBar:FC<NavBarProps> = ({ children,className }) => {
   return (
     <>
-      <div className={`block-config__navbar ${className}`}>
+      <div className={`block-config__navbar ${className ? className : ""}`}>
         {children}
       </div>
     </>

@@ -14,7 +14,7 @@ interface NavItemProps {
 export const NavItem:FC<NavItemProps> = ({children,className}) => {
   return (
     <>
-      <div className={`block-config__navbar-nav-item ${className}`}>
+      <div className={`block-config__navbar-nav-item ${className ? className : ""}`}>
         {children}
       </div>
     </>

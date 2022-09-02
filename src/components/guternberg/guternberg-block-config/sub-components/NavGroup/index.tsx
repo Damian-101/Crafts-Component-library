@@ -12,7 +12,7 @@ interface NavGroupProps {
 export const NavGroup:FC<NavGroupProps> = ({ children,className }) => {
   return (
     <>
-      <div className={`block-config__navbar-group ${className}`}>{children}</div>
+      <div className={`block-config__navbar-group ${className ? className : ""}`}>{children}</div>
     </>
   );
 };

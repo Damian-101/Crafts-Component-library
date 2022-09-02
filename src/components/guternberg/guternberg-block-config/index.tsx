@@ -6,6 +6,10 @@ import PropTypes from "prop-types";
 import "../../../scss/loading-screen.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Oval } from "react-loader-spinner";
+export { NavBar } from "./sub-components/navBar"
+export { NavItem } from "./sub-components/navItem"
+export { NavButton } from "./sub-components/navButton"
+export { NavGroup } from "./sub-components/NavGroup"
 
 export interface BlockConfigProps {
   /**

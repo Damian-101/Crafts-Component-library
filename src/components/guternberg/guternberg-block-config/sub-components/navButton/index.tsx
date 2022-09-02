@@ -20,7 +20,7 @@ interface NavButtonProps {
 export const NavButton:FC<NavButtonProps> = ({name,icon,onClick,isSelected,className}) => {
   return (
     <>
-      <div className={`nav-button ${isSelected ? 'active' : ""} ${className}`} onClick={onClick} data-tip={name} >
+      <div className={`nav-button ${isSelected ? 'active' : ""} ${className ? className : ""}`} onClick={onClick} data-tip={name} >
       <ReactTooltip place="top" type="dark" effect="solid" clickable={true} className="nav-button__tooltip"/>
         <div className="nav-button__icon">
           {/* @ts-ignore */}

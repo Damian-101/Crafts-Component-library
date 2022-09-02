@@ -1,7 +1,11 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode } from "react";
 import "./scss/index.scss";
 import "../../../scss/loading-screen.scss";
-import 'react-loading-skeleton/dist/skeleton.css';
+import "react-loading-skeleton/dist/skeleton.css";
+export { NavBar } from "./sub-components/navBar";
+export { NavItem } from "./sub-components/navItem";
+export { NavButton } from "./sub-components/navButton";
+export { NavGroup } from "./sub-components/NavGroup";
 export interface BlockConfigProps {
     /**
      * Name Of The Block

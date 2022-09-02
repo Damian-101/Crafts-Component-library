@@ -1,0 +1,10 @@
+.nav-item-searchbar{
+    width: 100%;
+}
+
+@media screen and (min-width:568px) {
+    .nav-item-searchbar{
+        width: auto;
+    }
+    
+}

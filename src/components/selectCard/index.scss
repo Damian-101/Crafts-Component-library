@@ -1,4 +1,4 @@
-
+@import "../../scss/loading-screen.scss";
 .select-item{
     background-color: #FFFFFF;
     min-height: 75px;
@@ -10,7 +10,7 @@
     user-select: none;
     cursor: pointer;
     .select-item__img{
-        width: 78px;
+        aspect-ratio: 1/1;
         height: 100%;
         background-size: cover;
     }
@@ -29,11 +29,6 @@
     margin-left: 1rem;
 }
 
-.select-item__img{
-    width: 78px;
-    height: 100% !important;
-    object-fit: cover;
-}
 .select-item__name{
     margin-left: 2rem;
     font-family: var(--primaryFont);
@@ -41,3 +36,11 @@
     width: 100%;
 }
 
+
+
+// Skeleton
+
+.select-item__name.skeleton{
+    color: transparent;
+    max-width: 300px;
+}

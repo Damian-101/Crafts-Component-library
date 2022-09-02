@@ -1,8 +1,13 @@
-import React, { useState } from "react"
+import React, { FC,useState } from "react"
 import "./index.scss"
 
+interface SearchbarProps {
+    /** On SearchBar Value Change `return (searchValue)` */
+    onChange:(value:string) => void
+}
 
-export const SearchBar = ({onChange}) => {
+/**Search Bar Component */
+export const SearchBar:FC<SearchbarProps> = ({onChange}) => {
     const [isSelected,setIsSelected] = useState(false)
     const [value,setValue] = useState("")
 
@@ -22,7 +27,7 @@ export const SearchBar = ({onChange}) => {
 
     const onInputChange = (e:any) => {
         setValue(e.target.value)
-        onChange(value)
+        onChange(e.target.value)
     }
 
     const onCloseClick = (e:any) => {

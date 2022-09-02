@@ -12,24 +12,21 @@ import { faAmazon } from "@fortawesome/free-brands-svg-icons";
 import { SearchBar } from "../../../components/searchBar";
 import {SelectItem} from "../../../components/selectCard"
 import testImage from "./images/test-image.png"
+import { Dropdown } from "../../../components/dropdown";
+import { DropdownSm } from "../../../components/dropdownSm";
+import "./scss/index.scss"
 
 const BlockConfigContent = () => {
-  const [isPopupRendered, setIsPopupRendered] = useState(false);
   const [selectedValues,setSelectedValues] = useState([])
-  //layout config
-  const layoutConfig = [
-    { name: "layout 1", img: layout1 },
-    { name: "layout 2", img: layout2 },
-  ];
+  const [searchValue,setSearchValue] = useState("")
 
-  const showSettings = () => {
-    setIsPopupRendered(true);
-  };
 
-  const hideSettings = () => {
-    setIsPopupRendered(false);
-  };
-
+  const testData = [
+    {text:"Text 1",image:{testImage}},
+    {text:"Text 2",image:{testImage}},
+    {text:"Text 3",image:{testImage}},
+    {text:"Text 4",image:{testImage}},
+  ]
 
   /** Add Selected Value And Remove De selected values*/
   const addSelectedValues = (isSelected,valueToSelect) => {
@@ -50,34 +47,29 @@ const BlockConfigContent = () => {
     addSelectedValues(isSelected,valueToSelect)
   }
 
-  const renderLayouts = () => {
-    return layoutConfig.map((layout) => {
-      return (
-        <div
-          className="cs-select-layout__layout-1 layout"
-          onClick={showSettings}
-        >
-          <img src={layout.img} alt={layout.name} data-layout={layout.name} />
-          <h3 className="cs-select-layout__layout-name">{layout.name}</h3>
-        </div>
-      );
-    });
-  };
+  const renderItems = () => {
+    //if search value match data render the Item component
+    return testData.map(item => {
+        if(item.text.toLocaleLowerCase() === searchValue.toLocaleLowerCase()){
+          return <SelectItem 
+          image={item.image.testImage} 
+          text={item.text} 
+          valueToSelect={item.text} 
+          onClick={onClick}
+        />
+      }     
+    })
+  }
+
   return (
     <>
       <NavBar>
         <NavGroup>
-          <NavItem>
-            <SearchBar/>
+          <NavItem className="nav-item-searchbar">
+            <SearchBar onChange={(value) => {setSearchValue(value)}}/>
           </NavItem>
-          <NavItem>
-            <NavButton
-              name="More Settings"
-              icon={<FontAwesomeIcon icon={faList} />}
-            />
-          </NavItem>
-          <NavItem>
-            <NavButton name="Amazon" icon={<FontAwesomeIcon icon={faAmazon}/>} />
+          <NavItem className="nav-item__sort">
+            <DropdownSm/>
           </NavItem>
         </NavGroup>
         <NavGroup>
@@ -92,9 +84,7 @@ const BlockConfigContent = () => {
           </NavItem>
         </NavGroup>
       </NavBar>
-      <SelectItem image={testImage} text="Is Your Child Overly Aggressive" valueToSelect={"Is Your Child Overly Aggressive"} onClick={onClick}/>
-      <SelectItem image={testImage} text="Is 2" valueToSelect={"Is 2"} onClick={onClick}/>
-      <SelectItem image={testImage} text="Is 3" valueToSelect={"Is 3"} onClick={onClick}/>
+      {renderItems()}
     </>
   );
 };
