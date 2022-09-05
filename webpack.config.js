@@ -74,5 +74,8 @@ module.exports = {
     externals: {
       "react": "react",
       "react-dom": "reactDom"
-    }
+    },
+    exclude: [
+      './wordpress-css/index.js'
+    ]
   };
