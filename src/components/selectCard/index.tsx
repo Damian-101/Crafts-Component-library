@@ -4,21 +4,30 @@ import "./index.scss";
 
 interface SelectItemProps{
   /** Select Items Image Path */
-  image:string,
+  image?:string,
   /** Item Text */
-  text:string,
+  text?:string,
   /** Value To Select */
-  valueToSelect:string,
+  valueToSelect?:string,
   /** On Item Click `return(isSelected,valueToSelect)`*/
-  onClick:(isSelected:boolean,valueToSelect:string) => void,
+  onClick?:(isSelected:boolean,valueToSelect:string) => void,
   /** Loading Screen For The Component */
-  isLoading:boolean
+  isLoading?:boolean
+  /**Default Selected? */
+  isDefaultSelected?:boolean
 }
 
 
 // Select Item Component 
-export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSelect, isLoading }) => {
+export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSelect, isLoading,isDefaultSelected }) => {
   const [isSelected, setIsSelected] = useState(false);
+
+
+  useEffect(() => {
+    if(isDefaultSelected){
+      setIsSelected(isDefaultSelected)
+    }
+  },[])
 
   const onToggleSelectClick = (e: any) => {
     setIsSelected(!isSelected);
@@ -27,7 +36,7 @@ export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSe
 
   return (
     <>
-      {isLoading && isLoading ? (
+      {isLoading ? (
         <div className="select-item">
           <div className="select-item__img skeleton"></div>
           <div className="select-item__name skeleton">{'Skeleton'}</div>

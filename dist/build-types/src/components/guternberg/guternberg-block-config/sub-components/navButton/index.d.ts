@@ -2,9 +2,9 @@ import { FC, ReactNode } from "react";
 import "./index.scss";
 interface NavButtonProps {
     /** Name Of The Button */
-    name: string;
+    name?: string;
     /** An Icon For The Button */
-    icon: ReactNode;
+    icon?: ReactNode;
     /**On Button Click */
     onClick?: (e: any) => {};
     /** Is Button Selected */

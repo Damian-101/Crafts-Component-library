@@ -28,13 +28,14 @@ export {
     PopupItem
 } from "./components/popup/index"
 
-
 export {
     DropdownSm,
 } from "./components/dropdownSm"
 
-
-
 export {
     SearchBar,
 } from "./components/searchBar"
+
+export {
+    SelectItem,
+} from "./components/selectCard"

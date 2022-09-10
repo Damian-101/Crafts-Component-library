@@ -62,7 +62,6 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
   };
 
 
-
   //isLoading Default Is False
   if (!isLoading) {
     isLoading = false;
@@ -70,14 +69,12 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
   return (
     <>
       {isLoading === false ? (
-        <div className="block-config">
-          {brandLogo && (
+        <div className="block-config crafts">
             <img
-              src={brandLogo}
+              src={'https://i.ibb.co/1XLdX53/brand-logo-light.png'}
               alt="brand logo"
               className="block-config__details-brand-logo"
             />
-          )}
           <div className="block-config__details">
             <div className="block-config__details-top">
               {icon && <div className="block-config__details-icon">{icon}</div>}

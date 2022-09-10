@@ -1,3 +1,13 @@
-.block-config__popup-heading{
-    margin-bottom: 1.6rem;
+.block-config__popup{
+    .block-config__popup-heading{
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media screen and (min-width:1112px) {
+    .block-config__popup{
+        .block-config__popup-heading{
+            margin-bottom: 2.5rem;
+        }
+    }
 }

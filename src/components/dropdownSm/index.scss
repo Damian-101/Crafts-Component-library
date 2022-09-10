@@ -1,58 +1,56 @@
-.dropdownSm{
-}
-
-
-.dropdown-control-sm{
-    border: 2.9px solid var(--borderColor);
-    border-radius: 0.5rem;
-    padding: 1rem 1.5rem 1rem .8rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.1s all ease;
-    justify-content: center;
-    position: relative;
-    color: var(--secondary-color);
-    background-color: transparent;
-    font-size: 1.2rem;
-    font-weight: 500;
-    appearance: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-x: right 8px;
-    background-size: 8px;
-}
-
-option{
-    background-color: none;
-    font-weight: 400;
-}
-
-.dropdown-control-sm:focus{
-    border: 2.9px solid var(--secondary-color);
-}
-
-.dropdown-control-sm:hover{
-    border: 2.9px solid var(--secondary-color);
-}
-
-
-.dropdown-control-sm__dropdown-icon{
-    width: 10px;
-    svg{
-        width: 100% !important;
-        height: 100% !important;
-    }
-}
-
-
-@media screen and (min-width:1112px) {
+.crafts{
     .dropdown-control-sm{
-        padding: 1.2rem 2.5rem 1.2rem .9rem;
-        font-size: 1.7rem;
-        background-size: 12px;
-        background-position-x: right 13px;
+        border: 2.9px solid var(--crafts-component-borderColor);
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem 1rem .8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.1s all ease;
+        justify-content: center;
+        position: relative;
+        color: var(--crafts-component-secondary-color);
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-weight: 500;
+        appearance: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-x: right 8px;
+        background-size: 8px;
+    }
+    
+    option{
+        background-color: none;
+        font-weight: 400;
+    }
+    
+    .dropdown-control-sm:focus{
+        border: 2.9px solid var(--crafts-component-secondary-color);
+    }
+    
+    .dropdown-control-sm:hover{
+        border: 2.9px solid var(--crafts-component-secondary-color);
+    }
+    
+    
+    .dropdown-control-sm__dropdown-icon{
+        width: 10px;
+        svg{
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    
+    
+    @media screen and (min-width:1112px) {
+        .dropdown-control-sm{
+            padding: 1.2rem 2.5rem 1.2rem .9rem;
+            font-size: 1.7rem;
+            background-size: 12px;
+            background-position-x: right 13px;
+        }
     }
 }

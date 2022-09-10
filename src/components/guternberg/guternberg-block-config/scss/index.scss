@@ -6,7 +6,7 @@
     min-height: 500px;
     font-family: "poppins";
     position: relative;
-    border-radius: var(--border-radius-main);
+    border-radius: var(--crafts-component-border-radius-main);
     min-height: 568px;
     .block-config__details {
         .block-config__details-heading {
@@ -58,7 +58,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border-radius: var(--border-radius-inner);
+    border-radius: var(--crafts-component-border-radius-inner);
     opacity: 0;
     z-index: -1;
     transition: .2s all ease;
@@ -87,7 +87,7 @@
         right: 0;
         overflow: scroll;
         height: 84%;
-        border-radius: var(--border-radius-inner);
+        border-radius: var(--crafts-component-border-radius-inner);
     }
 }
 
@@ -102,7 +102,7 @@
     height: 100%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75);
-    border-radius: var(--border-radius-main);
+    border-radius: var(--crafts-component-border-radius-main);
 }
 
 
@@ -141,65 +141,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    border-radius: 0 var(--border-radius-main) var(--border-radius-main) 0;
-    padding: var(--sidebar-verticle-Spacing) var(--sidebar-horizontal-spacing);
+    border-radius: 0 var(--crafts-component-border-radius-main) var(--crafts-component-border-radius-main) 0;
+    padding: var(--crafts-component-sidebar-verticle-Spacing) var(--crafts-component-sidebar-horizontal-spacing);
     overflow: scroll;
 }
-
-
-// .sidebar--toggle__wraper{
-//     position: relative;
-// }
-// .sidebar--toggle{
-//     width: 30px;
-//     margin-left: auto;
-//     z-index: 999;
-//     position: absolute;
-//     right: 0;
-//     display: block;
-//     // padding: inherit;
-//     svg{
-//         width: 100% !important;
-//         height: 100% !important;
-//     }
-// }
-
-// .sidebar__heading{
-//     margin-bottom: 3rem;
-//     font-weight: 500;
-// }
-
-// .sidebar__group{
-//     margin-bottom: 4.5rem;
-// }
-
-// .sidebar__label{
-//     padding-bottom: 1.5rem;
-//     color: #000;
-//     opacity: 100;
-//     display: block;
-    
-// }
-
-// .barline{
-//     width: auto;
-//     height: 2px;
-//     display: block;
-//     background-color: #B9B9B9;
-//     margin-bottom: 2rem;
-//     margin-left: -var(--sidebar-horizontal-spacing);
-//     margin-right: -var(--sidebar-horizontal-spacing);
-// }
-
-// @media screen and (min-width:834px) {
-//     .sidebar{
-//         width: 40%;
-//     }
-// }
-
-// @media screen and (min-width:1112px) {
-//     .sidebar{
-//         width: 30%;
-//     }
-// }
-

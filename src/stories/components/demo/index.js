@@ -15,6 +15,7 @@ import testImage from "./images/test-image.png"
 import { Dropdown } from "../../../components/dropdown";
 import { DropdownSm } from "../../../components/dropdownSm";
 import "./scss/index.scss"
+import { TextInputControl } from "../../../components/text-input-control";
 
 const BlockConfigContent = () => {
   const [selectedValues,setSelectedValues] = useState([])
@@ -56,6 +57,8 @@ const BlockConfigContent = () => {
           text={item.text} 
           valueToSelect={item.text} 
           onClick={onClick}
+          isLoading={false}
+          isDefaultSelected={true}
         />
       }     
     })
@@ -69,7 +72,7 @@ const BlockConfigContent = () => {
             <SearchBar onChange={(value) => {setSearchValue(value)}}/>
           </NavItem>
           <NavItem className="nav-item__sort">
-            <DropdownSm/>
+            <DropdownSm dropdownItems={['Select Posts','item2']} onChange={(value) => {console.log(value)}}/>
           </NavItem>
         </NavGroup>
         <NavGroup>
@@ -81,6 +84,12 @@ const BlockConfigContent = () => {
           </NavItem>
           <NavItem>
             <NavButton name="Name" icon={<FontAwesomeIcon icon={faList} />} />
+          </NavItem>
+          <NavItem>
+            <NavButton name="Submit Posts"/>
+          </NavItem>
+          <NavItem>
+            <TextInputControl/>
           </NavItem>
         </NavGroup>
       </NavBar>

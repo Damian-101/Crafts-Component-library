@@ -18,14 +18,14 @@ html {
 //////////////Colors//////////////////
 //////////////////////////////////////
 :root{
-    --theme-color:#EE3030;
-    --secondary-theme-color:#0c2b4c;
-    --sidebar-verticle-Spacing:4rem;
-    --sidebar-horizontal-spacing:2rem;
-    --secondary-color-light: #949BA8;
-    --secondary-color:#0C1B38;
-    --borderColor:#BBBCBD;
-    --green-color:#4DC16D;
+    --crafts-component-theme-color:#EE3030;
+    --crafts-component-secondary-theme-color:#0c2b4c;
+    --crafts-component-sidebar-verticle-Spacing:4rem;
+    --crafts-component-sidebar-horizontal-spacing:2rem;
+    --crafts-component-secondary-color-light: #949BA8;
+    --crafts-component-secondary-color:#0C1B38;
+    --crafts-component-borderColor:#BBBCBD;
+    --crafts-component-green-color:#4DC16D;
 }
 
 
@@ -34,35 +34,39 @@ html {
 //////////////////////////////////////
 
 :root{
-    --font-size-heading:2rem;
-    --font-size-paragraph:1.4rem;
-    --font-size-sub-heading:1.6rem;
-    --font-size-300:1.6rem;
+    --crafts-component-font-size-heading:2rem;
+    --crafts-component-font-size-paragraph:1.4rem;
+    --crafts-component-font-size-sub-heading:1.6rem;
+    --crafts-component-font-size-300:1.6rem;
 }
 
 @media screen and (min-width:1034px) {
     :root{
-        --font-size-heading:2.5rem;
-        --font-size-paragraph:1.7rem;
-        --font-size-sub-heading:1.9rem;
-        --font-size-300:1.7rem;
+        --crafts-component-font-size-heading:2.5rem;
+        --crafts-component-font-size-paragraph:1.7rem;
+        --crafts-component-font-size-sub-heading:1.9rem;
+        --crafts-component-font-size-300:1.7rem;
     }
 }
 
-h1{
-    font-size: var(--font-size-heading);
-    font-weight: 500;
+.block-config h1{
+    font-size: var(--crafts-component-font-size-heading) !important;
+    font-weight: 500 !important;
+    margin: 0;
 }
-h2{
-    font-size: var(--font-size-sub-heading);
-    font-weight: 400;
+.block-config h2{
+    font-size: var(--crafts-component-font-size-sub-heading) !important;
+    font-weight: 400 !important;
+    margin: 0;
 }
-h3{
-    font-size: var(--font-size-300);
+.block-config h3{
+    font-size: var(--crafts-component-font-size-300) !important;
+    margin: 0 !important;
 }
-p{
-    font-size: var(--font-size-paragraph);
-    color: rgb(64, 64, 64);
+.block-config p{
+    font-size: var(--crafts-component-font-size-paragraph) !important;
+    color: rgb(64, 64, 64) !important;
+    margin: 0;
 }
 
 
@@ -72,7 +76,7 @@ p{
 //////////////////////////////////////
 
 :root{
-    --border-radius-main: 2rem;
-    --border-radius-inner: 1rem;
+    --crafts-component-border-radius-main: 2rem;
+    --crafts-component-border-radius-inner: 1rem;
 }
 

@@ -7,6 +7,7 @@
   "exclude": [
     "src/variables.js",
     "src/variables.d.ts",
+    "**/wordpress-css/index.js"
   ],
   "compilerOptions": {
     "declaration": true,

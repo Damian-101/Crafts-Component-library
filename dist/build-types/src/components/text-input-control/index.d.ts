@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "../../../wordpress-css";
 import "./index.scss";
 import "../../scss/theme.scss";
 import "../scss/input-fields.scss";

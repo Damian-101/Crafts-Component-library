@@ -1,37 +1,64 @@
 import React, { FC, useEffect, useState, ReactNode } from "react";
-import "./index.scss"
+import "./index.scss";
 import ReactTooltip from "react-tooltip";
 
 interface NavButtonProps {
   /** Name Of The Button */
-  name : string,
+  name?: string;
   /** An Icon For The Button */
-  icon : ReactNode,
+  icon?: ReactNode;
   /**On Button Click */
-  onClick ?:(e:any) => {},
+  onClick?: (e: any) => {};
   /** Is Button Selected */
-  isSelected ?:boolean,
-  // Add A Custom Class Name To The Component 
-  className?: string
+  isSelected?: boolean;
+  // Add A Custom Class Name To The Component
+  className?: string;
 }
 
-
 /** Icon Text Component To Display GuternbergBlockConfig Navbar Button  */
-export const NavButton:FC<NavButtonProps> = ({name,icon,onClick,isSelected,className}) => {
+export const NavButton: FC<NavButtonProps> = ({
+  name,
+  icon,
+  onClick,
+  isSelected,
+  className,
+}) => {
   return (
     <>
-      <div className={`nav-button ${isSelected ? 'active' : ""} ${className ? className : ""}`} onClick={onClick} data-tip={name} >
-      <ReactTooltip place="top" type="dark" effect="solid" clickable={true} className="nav-button__tooltip"/>
-        <div className="nav-button__icon">
-          {/* @ts-ignore */}
-          {icon}
+      {icon !== undefined ? (
+        <div
+          className={`nav-button ${isSelected ? "active" : ""} ${
+            className ? className : ""
+          }`}
+          onClick={onClick}
+          data-tip={name}
+        >
+          <ReactTooltip
+            place="top"
+            type="dark"
+            effect="solid"
+            clickable={true}
+            className="nav-button__tooltip"
+          />
+          <div className="nav-button__icon">
+            {/* @ts-ignore */}
+            {icon}
+          </div>
+          <div className="nav-button__name">{name}</div>
         </div>
-        <div className="nav-button__name">{name}</div>
-      </div>
+      ) : (
+        <div
+          className={`nav-button only--text ${isSelected ? "active" : ""} ${
+            className ? className : ""
+          }`}
+          onClick={onClick}
+        >
+          <div className="nav-button__name">{name}</div>
+        </div>
+      )}
     </>
   );
 };
-
 
 // /**
 //  * Component Args

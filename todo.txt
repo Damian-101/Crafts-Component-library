@@ -1,0 +1,6 @@
+add max word count for selectCard And Add 3 dots if the count exeeded
+change the first name of every class to "crafts-component-library"
+
+
+
+remove the green border from selectCard //The Styles Applied Are In The Blocks Plugin File

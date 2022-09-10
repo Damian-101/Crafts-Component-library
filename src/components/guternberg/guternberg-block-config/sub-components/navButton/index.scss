@@ -2,7 +2,7 @@
 
 
 .nav-button{
-    border: 2.9px solid var(--borderColor);
+    border: 2.9px solid var(--crafts-component-borderColor);
     border-radius: .5rem;
     padding: 1.3rem 1.5rem;
     display: flex;
@@ -17,7 +17,7 @@
 .nav-button__icon{
     width: 17px;
     height: 17px;
-    color: var(--secondary-color-light);
+    color: var(--crafts-component-secondary-color-light);
     svg{
         width: 100% !important;
         height: 100% !important;
@@ -26,19 +26,19 @@
 
 
 .nav-button__name{
-    color: var(--secondary-color);
+    color: var(--crafts-component-secondary-color);
     font-weight: 500;
     font-size: 1.3rem;
     display: none;
 }
 
 .nav-button:hover{
-    border: 2.9px solid var(--secondary-color);
+    border: 2.9px solid var(--crafts-component-secondary-color);
 }
 
 .nav-button.active{
     border-color: transparent;
-    background-color: var(--secondary-color);
+    background-color: var(--crafts-component-secondary-color);
     .nav-button__name{
         color: #fff;
     }
@@ -48,7 +48,14 @@
 }
 
 .nav-button__tooltip{
-    background-color: var(--secondary-color) !important;
+    background-color: var(--crafts-component-secondary-color) !important;
+}
+
+.nav-button.only--text{
+    .nav-button__name{
+        display: block;
+    }
+    
 }
 
 @media screen and (min-width:1112px) {
