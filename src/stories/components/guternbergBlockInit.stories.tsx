@@ -3,6 +3,7 @@ import {GuternbergBlockConfig} from "../../components/guternberg/guternberg-bloc
 import Layout from "../../components/guternberg/guternberg-block-config/icons/icon.js"
 import BlockConfigContent from './demo';
 import BlockConfigContent2 from './demo2';
+// @ts-ignore
 import Doc from './docs/GuternbergBlockConfig.mdx'
 
 
@@ -24,6 +25,9 @@ Default.args = {
     description: `Select A Layout`,
     icon: <Layout />,
     children:<BlockConfigContent/>,
+    isNotificationOpen:true,
+    notificationText:'You Must Select Minimum 8 Posts',
+    onNotificationClose:() => alert('closed')
 };
 
 export const Popup = Template.bind({});

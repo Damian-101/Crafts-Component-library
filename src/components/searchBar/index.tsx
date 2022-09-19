@@ -4,10 +4,12 @@ import "./index.scss"
 interface SearchbarProps {
     /** On SearchBar Value Change `return (searchValue)` */
     onChange:(value:string) => void
+    /** On Clear Input Button Clicked (The x Button) `return(e)`*/
+    onClearInput:(e:any) => void
 }
 
 /**Search Bar Component */
-export const SearchBar:FC<SearchbarProps> = ({onChange}) => {
+export const SearchBar:FC<SearchbarProps> = ({onChange,onClearInput}) => {
     const [isSelected,setIsSelected] = useState(false)
     const [value,setValue] = useState("")
 
@@ -32,6 +34,7 @@ export const SearchBar:FC<SearchbarProps> = ({onChange}) => {
 
     const onCloseClick = (e:any) => {
         clearInput()
+        onClearInput(e)
     }
 
     return(

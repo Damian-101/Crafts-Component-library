@@ -4,6 +4,7 @@ import {Dropdown,DropdownItem} from '../../../components/dropdown';
 import {Popup,PopupGroup,PopupItem} from '../../../components/popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons'
+import {ToggleBtn} from "../../../components/toggleBtn"
 const RenderPopupContent = ({ isPopupRendered, onClose }) => {
   const [value, setValue] = useState()
   const [isSelected, setIsSelected] = useState(false)
@@ -41,6 +42,9 @@ const RenderPopupContent = ({ isPopupRendered, onClose }) => {
         label="Recommended Posts Settings"
       >
         <PopupGroup label="Post Settings">
+          <PopupItem>
+            <ToggleBtn label='Enable Dynamic Posts' isEnable={true} onClick={() => {alert('clicked')}}/>
+          </PopupItem>
           <PopupItem>
             <NumberInputControl
               label="Max Posts Count"

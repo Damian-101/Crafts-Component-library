@@ -10,14 +10,20 @@ interface DropdownSmProps {
     dropdownItems:string[],
     /** On DropdonwSm Change `return(value)`*/
     onChange?:(value:string) => void
+    /** Disable Component */
+    disabled:boolean
 }
 
 
 /** Dropdown Component Small */
-export const DropdownSm:FC<DropdownSmProps> = ({dropdownItems,onChange}) => {
+export const DropdownSm:FC<DropdownSmProps> = ({dropdownItems,onChange,disabled}) => {
     const renderDropdownItems = () => {
         return dropdownItems.map(dropdownItem => {
-            return <option value={dropdownItem}>{dropdownItem}</option>
+            if(disabled && disabled === true){
+                return <option value={dropdownItem} disabled>{dropdownItem}</option>
+            }else{
+                return <option value={dropdownItem}>{dropdownItem}</option>
+            }
         })
     }
     const onDropdownSmChange = (e:any) => {
@@ -29,7 +35,7 @@ export const DropdownSm:FC<DropdownSmProps> = ({dropdownItems,onChange}) => {
     }
     return(
         <>
-            <select className="dropdown-control-sm" style={{backgroundImage:`url(${dropdownIcon})`}} onChange={onDropdownSmChange}>
+            <select className="dropdown-control-sm" data-crafts-is-dropdown-disabled={disabled && disabled} style={{backgroundImage:`url(${dropdownIcon})`}} onChange={onDropdownSmChange}>
                 {renderDropdownItems()}
             </select>
         </>

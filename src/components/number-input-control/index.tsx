@@ -89,7 +89,7 @@ export const NumberInputControl:FC<NumberInputControlProps> = ({ label, placehol
     }
 
     return (
-        <div className="number-control input-control">
+        <div className="number-control input-control crafts">
             <div className={`input-field ${className && className} ${isSelected === true && 'selected'} ${isExpanded === true && 'expanded'}`} onFocus={onInputFocus} onBlur={onInputBlur} onClick={onInputFocus} onKeyDown={onKeyDown}>
                 <label htmlFor={stringToName(label)}>{label && label}</label>
                 <input type="number" inputMode="numeric" className={`input-field__input`} name={stringToName(label)} onChange={onChange && onChange} value={value && value} ref={textInput} placeholder={placeholder} />

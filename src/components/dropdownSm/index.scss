@@ -11,10 +11,10 @@
         transition: 0.1s all ease;
         justify-content: center;
         position: relative;
-        color: var(--crafts-component-secondary-color);
+        color: var(--crafts-component-secondary-color) !important;
         background-color: transparent;
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 500 !important;
         appearance: none;
         background-repeat: no-repeat;
         background-position: center;
@@ -28,14 +28,26 @@
     }
     
     .dropdown-control-sm:focus{
-        border: 2.9px solid var(--crafts-component-secondary-color);
+        border: 2.9px solid var(--crafts-component-secondary-color) !important;
     }
     
     .dropdown-control-sm:hover{
-        border: 2.9px solid var(--crafts-component-secondary-color);
+        border: 2.9px solid var(--crafts-component-secondary-color) !important;
+        box-shadow: none;
     }
     
-    
+    [data-crafts-is-dropdown-disabled=true]{
+        opacity: 50%;
+        user-select: none;
+        cursor: not-allowed;
+        &:hover{
+            border-color:var(--crafts-component-borderColor) !important;
+        }
+        &:focus{
+            border-color:var(--crafts-component-borderColor) !important;
+        }
+    }
+
     .dropdown-control-sm__dropdown-icon{
         width: 10px;
         svg{

@@ -1,13 +1,17 @@
 @import "../../../../scss/theme.scss";
+ 
 
 .block-config {
     background-color: rgb(235, 235, 235);
     padding: 2rem;
-    min-height: 500px;
     font-family: "poppins";
     position: relative;
     border-radius: var(--crafts-component-border-radius-main);
     min-height: 568px;
+    max-height: 568px;
+    overflow: scroll;
+    width: 100%;
+
     .block-config__details {
         .block-config__details-heading {
             margin: 0;
@@ -19,27 +23,99 @@
             margin-bottom: 1.8rem;
         }
     }
+
+    .content{
+        min-height: 300px;
+    }
+
+    // make this take 100% with overflow values
+    .block-config__error-msg-wrapper{
+        position: absolute;
+        // height: 100%;
+        // background-color: red;
+        // top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: inherit;
+        background-color: red;
+    }
+    //error message
+    .block-config__error-msg {
+        background-color: #FF6060;
+        border-radius: var(--crafts-component-border-radius-inner);
+        min-height: 8rem;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        padding: 2rem;
+        position: sticky;
+        width: 100%;
+        bottom: 0; 
+        animation-name: toggleErrorMsg;
+        animation-duration: .3s;
+        animation-timing-function:linear;
+        // margin-top: 16rem;
+        .block-config__error-msg-notice{
+            color: #fff;
+            font-size: var(--crafts-component-font-size-paragraph);
+            padding-right: .5rem;
+        }
+        .block-config__error-msg-icon{
+            width: 18px;
+            height: 18px;
+            margin-left: auto;
+            cursor: pointer;
+            svg{
+                fill: #fff;
+                width: 100% !important;
+                height: 100% !important;
+                path{
+                    stroke: #fff;
+                    opacity: 70%;
+                    transition: .1s opacity ease-in-out;
+                }
+            }
+        }
+
+        @keyframes toggleErrorMsg {
+            0%{bottom: -100px;}
+            100%{bottom: 0;}
+        }
+        
+        .block-config__error-msg-icon:hover{
+            svg{
+                path{
+                    stroke: #fff;
+                    opacity: 100%;
+                }
+            }
+        }
+    }
 }
 
-.block-config.loading{
+.block-config.loading {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.block-config__details-brand-logo{
+.block-config__details-brand-logo {
     width: 120px;
     display: table;
     margin-bottom: 2rem;
 }
 
-.block-config__details-top{
+.block-config__details-top {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.block-config__details-icon{
+.block-config__details-icon {
     min-width: 40px;
     max-width: 40px;
     display: inline-block;
@@ -62,12 +138,14 @@
     opacity: 0;
     z-index: -1;
     transition: .2s all ease;
-    .block-config__popup-close-btn{
+
+    .block-config__popup-close-btn {
         width: 18px;
         margin-left: auto;
         cursor: pointer;
         margin-bottom: 2rem;
-        svg{
+
+        svg {
             width: 100%;
             height: 100%;
             display: block;
@@ -75,6 +153,7 @@
             z-index: 1;
         }
     }
+
     .block-config__popup-content {
         padding: 2.5rem 1.5rem;
         background-color: #EFEFEF;
@@ -91,13 +170,13 @@
     }
 }
 
-.block-config__popup.active{
+.block-config__popup.active {
     z-index: 999;
     opacity: 100%;
 }
 
 
-.block-config__popup-overlay{
+.block-config__popup-overlay {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -106,7 +185,7 @@
 }
 
 
-.block-config__content{
+.block-config__content {
     position: relative;
 }
 
@@ -114,15 +193,17 @@
     .block-config {
         padding: 5rem;
         min-height: 600px;
-        .block-config__details-top{
+        .block-config__details-top {
             margin-bottom: 1rem;
         }
+
         .block-config__details {
             .block-config__details-description {
                 // max-width: 48ch;
                 margin-bottom: 1.8rem;
             }
         }
+
         .block-config__popup {
             .block-config__popup-content {
                 padding: 3.5rem 2.5rem;
@@ -134,7 +215,7 @@
 }
 
 //sidebar
-.sidebar{
+.sidebar {
     background-color: #d7d7d7;
     width: 90%;
     height: 100%;

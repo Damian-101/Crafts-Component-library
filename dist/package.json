@@ -1,6 +1,6 @@
 {
   "name": "crafts-components-library",
-  "version": "2.1.5",
+  "version": "2.1.9",
   "description": "Crafts Components Library",
   "main": "build/index.js",
   "types": "build-types/src/index.d.ts",

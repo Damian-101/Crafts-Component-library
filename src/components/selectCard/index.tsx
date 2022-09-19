@@ -5,7 +5,7 @@ import "./index.scss";
 interface SelectItemProps{
   /** Select Items Image Path */
   image?:string,
-  /** Item Text */
+  /** Item Text `use `` arround the text you want to highlight`*/
   text?:string,
   /** Value To Select */
   valueToSelect?:string,
@@ -15,13 +15,14 @@ interface SelectItemProps{
   isLoading?:boolean
   /**Default Selected? */
   isDefaultSelected?:boolean
+  /**Disable Selecting */
+  disableSelect?:boolean
 }
 
 
 // Select Item Component 
-export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSelect, isLoading,isDefaultSelected }) => {
+export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSelect, isLoading,isDefaultSelected,disableSelect }) => {
   const [isSelected, setIsSelected] = useState(false);
-
 
   useEffect(() => {
     if(isDefaultSelected){
@@ -29,15 +30,51 @@ export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSe
     }
   },[])
 
+  useEffect(() => {
+    if(isDefaultSelected){
+      setIsSelected(isDefaultSelected)
+    }
+  },[isDefaultSelected])
+
+  useEffect(() => {
+    
+  },[text])
+
   const onToggleSelectClick = (e: any) => {
-    setIsSelected(!isSelected);
+    if(disableSelect && disableSelect === true){
+      setIsSelected(isDefaultSelected);
+    }else{
+      setIsSelected(!isSelected);
+    }
     onClick(!isSelected, valueToSelect);
   };
+
+  // Look For Select Symbol And HighLight Text Between Them
+  const highLightText = (text:string) => {
+    let symobolLocations:number[] = []
+    const textArray = text.split("")
+      textArray.map((e,i,arr) => {
+        if(e === "`"){
+          symobolLocations = [...symobolLocations,i]
+        }
+      })
+    const RenderHighLightedText = symobolLocations.map((value,index) => {
+      if(index%2 === 0){
+        textArray[value] = "<span class='select-item__select-text'>"
+      }
+      if(index%2 === 1){
+        textArray[value] = "</span>"
+      }
+    })
+    const arrayToString = textArray.join("")
+    return arrayToString
+  } 
+
 
   return (
     <>
       {isLoading ? (
-        <div className="select-item">
+        <div className="select-item crafts loading">
           <div className="select-item__img skeleton"></div>
           <div className="select-item__name skeleton">{'Skeleton'}</div>
         </div>
@@ -47,7 +84,7 @@ export const SelectItem:FC<SelectItemProps> = ({ image, text, onClick, valueToSe
             className="select-item__img"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
-          <div className="select-item__name">{text}</div>
+          <div className="select-item__name">{<div dangerouslySetInnerHTML={{__html: highLightText(text)}} />}</div>
           <div
             className={`select-item__icon`}
             style={{ opacity: isSelected === true ? 100 : 0 }}

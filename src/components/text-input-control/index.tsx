@@ -77,7 +77,7 @@ export const TextInputControl:FC<TextInputControlProps> = ({label,placeholder,on
         }
     }
     return(
-        <div className="text-control input-control">
+        <div className="text-control crafts input-control">
             <div className={`input-field ${className && className} ${isSelected === true && 'selected'} ${isExpanded === true && 'expanded'}`} onFocus={onInputFocus} onBlur={onInputBlur} onClick={onInputFocus}>
                 <label htmlFor={label && stringToName(label)}>{label && label}</label>
                 <input type="text" className={`input-field__input`} name={label && stringToName(label)} onChange={onChange && onChange} maxLength={max && max} value={value && value} ref={textInput} placeholder={placeholder}/>

@@ -6,10 +6,10 @@ import PropTypes from "prop-types";
 import "../../../scss/loading-screen.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Oval } from "react-loader-spinner";
-export { NavBar } from "./sub-components/navBar"
-export { NavItem } from "./sub-components/navItem"
-export { NavButton } from "./sub-components/navButton"
-export { NavGroup } from "./sub-components/NavGroup"
+export { NavBar } from "./sub-components/navBar";
+export { NavItem } from "./sub-components/navItem";
+export { NavButton } from "./sub-components/navButton";
+export { NavGroup } from "./sub-components/NavGroup";
 
 export interface BlockConfigProps {
   /**
@@ -32,6 +32,18 @@ export interface BlockConfigProps {
    * Is Component Content Loading
    */
   isLoading?: boolean;
+  /**
+   * Notification Text
+   */
+   notificationText?:string
+  /**
+   * On Notification Close `return(e)`
+   */
+   onNotificationClose?:(e:any) => void
+  /**
+   * Is Notification Open
+   */
+   isNotificationOpen?:boolean
 }
 
 /**
@@ -43,7 +55,11 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
   icon,
   children,
   isLoading,
+  notificationText,
+  onNotificationClose,
+  isNotificationOpen,
 }) => {
+  const [isErrorMsg, setIsErrorMsg] = useState(false);
 
   const loading = () => {
     const skeletonColor = "rgb(209, 209, 209)";
@@ -61,7 +77,6 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
     );
   };
 
-
   //isLoading Default Is False
   if (!isLoading) {
     isLoading = false;
@@ -70,11 +85,11 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
     <>
       {isLoading === false ? (
         <div className="block-config crafts">
-            <img
-              src={'https://i.ibb.co/1XLdX53/brand-logo-light.png'}
-              alt="brand logo"
-              className="block-config__details-brand-logo"
-            />
+          <img
+            src={"https://i.ibb.co/1XLdX53/brand-logo-light.png"}
+            alt="brand logo"
+            className="block-config__details-brand-logo"
+          />
           <div className="block-config__details">
             <div className="block-config__details-top">
               {icon && <div className="block-config__details-icon">{icon}</div>}
@@ -92,7 +107,27 @@ export const GuternbergBlockConfig: FC<BlockConfigProps> = ({
               </h2>
             )}
           </div>
-          {children}
+          <div className="content">
+            {children}
+          </div>
+          {isNotificationOpen && isNotificationOpen ? (
+            <div className="block-config__error-msg">
+              <div className="block-config__error-msg-notice">
+                {notificationText && notificationText}
+              </div>
+              <div className="block-config__error-msg-icon" onClick={onNotificationClose && onNotificationClose}>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 2L22 22M2 22L22 2"
+                    stroke="black"
+                    stroke-width="3"
+                  />
+                </svg>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       ) : (
         //component loading screen

@@ -27,6 +27,18 @@ export interface BlockConfigProps {
      * Is Component Content Loading
      */
     isLoading?: boolean;
+    /**
+     * Notification Text
+     */
+    notificationText?: string;
+    /**
+     * On Notification Close `return(e)`
+     */
+    onNotificationClose?: (e: any) => void;
+    /**
+     * Is Notification Open
+     */
+    isNotificationOpen?: boolean;
 }
 /**
  * A Component To Display Guternberg Block Configuration

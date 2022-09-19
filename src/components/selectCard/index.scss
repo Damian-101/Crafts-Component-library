@@ -1,46 +1,66 @@
 @import "../../scss/loading-screen.scss";
-.select-item{
-    background-color: #FFFFFF;
-    min-height: 75px;
-    height: 1px;
-    display: flex;
-    align-items: center;
-    border: 2.9px solid var(--crafts-component-borderColor);
-    border-radius: .5rem;
-    user-select: none;
-    cursor: pointer;
-    .select-item__img{
-        aspect-ratio: 1/1;
-        height: 100%;
-        background-size: cover;
+
+.crafts{
+    .select-item{
+        background-color: #FFFFFF;
+        min-height: 75px;
+        height: 1px;
+        display: flex;
+        align-items: center;
+        border: 2.9px solid var(--crafts-component-borderColor);
+        border-radius: .5rem;
+        user-select: none;
+        cursor: pointer;
+        .select-item__img{
+            aspect-ratio: 1/1;
+            height: 100%;
+            background-size: cover;
+        }
     }
-}
+    .select-item__icon-bg{
+        fill: var(--crafts-component-green-color);
+    }
 
-.select-item__icon-bg{
-    fill: var(--crafts-component-green-color);
-}
-
-.select-item__icon{
-    display: flex;
-    // width: 100%;
-    justify-content: flex-end;
-    margin-right: 2rem;
-    transition: opacity 0.06s ease-in-out;
-    margin-left: 1rem;
-}
-
-.select-item__name{
-    margin-left: 2rem;
-    font-family: var(--crafts-component-primaryFont);
-    font-size: var(--crafts-component-font-size-paragraph);
-    width: 100%;
-}
-
-
-
-// Skeleton
-
-.select-item__name.skeleton{
-    color: transparent;
-    max-width: 300px;
+    .select-item__select-text{
+        background-color: var(--crafts-component-highlight-color);
+    }
+    
+    .select-item__icon{
+        display: flex;
+        // width: 100%;
+        justify-content: flex-end;
+        margin-right: 2rem;
+        transition: opacity 0.06s ease-in-out;
+        margin-left: 1rem;
+    }
+    
+    [data-nav-button-disabled=true]{
+        opacity: 50%;
+    }
+    [data-nav-button-disabled=true]:hover{
+        border-color: var(--crafts-component-borderColor);
+    }
+    .select-item__name{
+        margin-left: 2rem;
+        font-family: var(--crafts-component-primaryFont);
+        font-size: var(--crafts-component-font-size-paragraph);
+        width: 100%;
+    }
+    
+    
+    
+    // Skeleton
+    
+    .select-item__name.skeleton{
+        color: transparent;
+        max-width: 300px;
+    }
+    .select-item__name.skeleton:hover{
+        border: none !important;
+    }
+    .select-item.loading{
+        padding-right: 2rem;
+        border: none;
+        border-radius: .5rem;
+    }
 }
